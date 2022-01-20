@@ -32,8 +32,9 @@ namespace Microsoft.Maui.Platform
 		static IElementHandler? CreateTypeWithInjection(this Type viewType, IMauiContext mauiContext)
 		{
 			var handlerType = mauiContext.Handlers.GetHandlerType(viewType);
-			
-			if(handlerType == null) return null;
+
+			if (handlerType == null)
+				return null;
 
 #if ANDROID
 			if(mauiContext.Context != null)

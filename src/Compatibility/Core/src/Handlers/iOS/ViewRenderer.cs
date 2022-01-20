@@ -35,7 +35,7 @@ namespace Microsoft.Maui.Controls.Handlers.Compatibility
 		public override void LayoutSubviews()
 		{
 			base.LayoutSubviews();
-			if(_nativeView !=  null && Element != null)
+			if (_nativeView != null && Element != null)
 			{
 				_nativeView.Frame = new CoreGraphics.CGRect(0, 0, (nfloat)Element.Width, (nfloat)Element.Height);
 			}
@@ -72,7 +72,7 @@ namespace Microsoft.Maui.Controls.Handlers.Compatibility
 
 			_nativeView = control;
 
-			if(Control != null)
+			if (Control != null)
 				AddSubview(Control);
 		}
 
